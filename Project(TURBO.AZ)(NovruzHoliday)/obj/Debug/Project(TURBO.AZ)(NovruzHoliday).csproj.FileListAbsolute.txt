@@ -1,0 +1,17 @@
+D:\Code Academy\C# Projects\Project(TURBO.AZ)(NovruzHoliday)\Project(TURBO.AZ)(NovruzHoliday)\bin\Debug\Project(TURBO.AZ)(NovruzHoliday).exe.config
+D:\Code Academy\C# Projects\Project(TURBO.AZ)(NovruzHoliday)\Project(TURBO.AZ)(NovruzHoliday)\bin\Debug\Project(TURBO.AZ)(NovruzHoliday).exe
+D:\Code Academy\C# Projects\Project(TURBO.AZ)(NovruzHoliday)\Project(TURBO.AZ)(NovruzHoliday)\bin\Debug\Project(TURBO.AZ)(NovruzHoliday).pdb
+D:\Code Academy\C# Projects\Project(TURBO.AZ)(NovruzHoliday)\Project(TURBO.AZ)(NovruzHoliday)\bin\Debug\EntityFramework.dll
+D:\Code Academy\C# Projects\Project(TURBO.AZ)(NovruzHoliday)\Project(TURBO.AZ)(NovruzHoliday)\bin\Debug\EntityFramework.SqlServer.dll
+D:\Code Academy\C# Projects\Project(TURBO.AZ)(NovruzHoliday)\Project(TURBO.AZ)(NovruzHoliday)\bin\Debug\EntityFramework.xml
+D:\Code Academy\C# Projects\Project(TURBO.AZ)(NovruzHoliday)\Project(TURBO.AZ)(NovruzHoliday)\bin\Debug\EntityFramework.SqlServer.xml
+D:\Code Academy\C# Projects\Project(TURBO.AZ)(NovruzHoliday)\Project(TURBO.AZ)(NovruzHoliday)\obj\Debug\Project(TURBO.AZ)(NovruzHoliday).csprojAssemblyReference.cache
+D:\Code Academy\C# Projects\Project(TURBO.AZ)(NovruzHoliday)\Project(TURBO.AZ)(NovruzHoliday)\obj\Debug\Project_TURBO.AZ__NovruzHoliday_.MainForm.resources
+D:\Code Academy\C# Projects\Project(TURBO.AZ)(NovruzHoliday)\Project(TURBO.AZ)(NovruzHoliday)\obj\Debug\Project_TURBO.AZ__NovruzHoliday_.Properties.Resources.resources
+D:\Code Academy\C# Projects\Project(TURBO.AZ)(NovruzHoliday)\Project(TURBO.AZ)(NovruzHoliday)\obj\Debug\Project(TURBO.AZ)(NovruzHoliday).csproj.GenerateResource.cache
+D:\Code Academy\C# Projects\Project(TURBO.AZ)(NovruzHoliday)\Project(TURBO.AZ)(NovruzHoliday)\obj\Debug\Project(TURBO.AZ)(NovruzHoliday).csproj.CoreCompileInputs.cache
+D:\Code Academy\C# Projects\Project(TURBO.AZ)(NovruzHoliday)\Project(TURBO.AZ)(NovruzHoliday)\obj\Debug\Project(TURBO.AZ)(NovruzHoliday).csproj.CopyComplete
+D:\Code Academy\C# Projects\Project(TURBO.AZ)(NovruzHoliday)\Project(TURBO.AZ)(NovruzHoliday)\obj\Debug\Project(TURBO.AZ)(NovruzHoliday).exe
+D:\Code Academy\C# Projects\Project(TURBO.AZ)(NovruzHoliday)\Project(TURBO.AZ)(NovruzHoliday)\obj\Debug\Project(TURBO.AZ)(NovruzHoliday).pdb
+D:\Code Academy\C# Projects\Project(TURBO.AZ)(NovruzHoliday)\Project(TURBO.AZ)(NovruzHoliday)\obj\Debug\Project_TURBO.AZ__NovruzHoliday_.RegisterForm.resources
+D:\Code Academy\C# Projects\Project(TURBO.AZ)(NovruzHoliday)\Project(TURBO.AZ)(NovruzHoliday)\obj\Debug\Project_TURBO.AZ__NovruzHoliday_.ForgetPasswordForm.resources

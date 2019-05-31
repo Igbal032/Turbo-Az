@@ -1,0 +1,100 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="TurboAzModelStoreContainer" CdmEntityContainer="TurboAzEntities">
+    <EntitySetMapping Name="AdminPanels">
+      <EntityTypeMapping TypeName="TurboAzModel.AdminPanel">
+        <MappingFragment StoreEntitySet="AdminPanel">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="AdminName" ColumnName="AdminName" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Cars">
+      <EntityTypeMapping TypeName="TurboAzModel.Car">
+        <MappingFragment StoreEntitySet="Car">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="ModelID" ColumnName="ModelID" />
+          <ScalarProperty Name="YearID" ColumnName="YearID" />
+          <ScalarProperty Name="EPowID" ColumnName="EPowID" />
+          <ScalarProperty Name="FuelID" ColumnName="FuelID" />
+          <ScalarProperty Name="StatusID" ColumnName="StatusID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Car_Year">
+      <EntityTypeMapping TypeName="TurboAzModel.Car_Year">
+        <MappingFragment StoreEntitySet="Car_Year">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Year" ColumnName="Year" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="EnginerPowers">
+      <EntityTypeMapping TypeName="TurboAzModel.EnginerPower">
+        <MappingFragment StoreEntitySet="EnginerPower">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="EPowName" ColumnName="EPowName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Fuels">
+      <EntityTypeMapping TypeName="TurboAzModel.Fuel">
+        <MappingFragment StoreEntitySet="Fuel">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="FuelName" ColumnName="FuelName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Markas">
+      <EntityTypeMapping TypeName="TurboAzModel.Marka">
+        <MappingFragment StoreEntitySet="Marka">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="MarkaName" ColumnName="MarkaName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Models">
+      <EntityTypeMapping TypeName="TurboAzModel.Model">
+        <MappingFragment StoreEntitySet="Model">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="ModelName" ColumnName="ModelName" />
+          <ScalarProperty Name="MarkaID" ColumnName="MarkaID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SelledCars">
+      <EntityTypeMapping TypeName="TurboAzModel.SelledCar">
+        <MappingFragment StoreEntitySet="SelledCar">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="ModelIDs" ColumnName="ModelIDs" />
+          <ScalarProperty Name="YearIDs" ColumnName="YearIDs" />
+          <ScalarProperty Name="EpowIDs" ColumnName="EpowIDs" />
+          <ScalarProperty Name="FuelIDs" ColumnName="FuelIDs" />
+          <ScalarProperty Name="StatusIDs" ColumnName="StatusIDs" />
+          <ScalarProperty Name="By" ColumnName="By" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Status">
+      <EntityTypeMapping TypeName="TurboAzModel.Status">
+        <MappingFragment StoreEntitySet="Status">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="StatusName" ColumnName="StatusName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="UserPanels">
+      <EntityTypeMapping TypeName="TurboAzModel.UserPanel">
+        <MappingFragment StoreEntitySet="UserPanel">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+          <ScalarProperty Name="LastName" ColumnName="LastName" />
+          <ScalarProperty Name="E_mail" ColumnName="E-mail" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="ForgetingPassword" ColumnName="ForgetingPassword" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

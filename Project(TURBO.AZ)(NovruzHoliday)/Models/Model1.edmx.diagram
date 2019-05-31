@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="421c5b260e744c73a23639cba2779b31" Name="Diagram1">
+        <EntityTypeShape EntityType="TurboAzModel.AdminPanel" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="TurboAzModel.Car" Width="1.5" PointX="3" PointY="3.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="TurboAzModel.Car_Year" Width="1.5" PointX="0.75" PointY="3.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="TurboAzModel.EnginerPower" Width="1.5" PointX="0.75" PointY="7.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="TurboAzModel.Fuel" Width="1.5" PointX="0.75" PointY="9.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="TurboAzModel.Marka" Width="1.5" PointX="1.5" PointY="15.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="TurboAzModel.Model" Width="1.5" PointX="0.75" PointY="12.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="TurboAzModel.SelledCar" Width="1.5" PointX="6" PointY="3.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="TurboAzModel.Status" Width="1.5" PointX="0.75" PointY="18.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="TurboAzModel.UserPanel" Width="1.5" PointX="2.75" PointY="7.75" IsExpanded="true" />
+        <AssociationConnector Association="TurboAzModel.FK_Car_Car_Year" ManuallyRouted="false" />
+        <AssociationConnector Association="TurboAzModel.FK_Car_EnginerPower" ManuallyRouted="false" />
+        <AssociationConnector Association="TurboAzModel.FK_Car_Fuel" ManuallyRouted="false" />
+        <AssociationConnector Association="TurboAzModel.FK_Car_Model" ManuallyRouted="false" />
+        <AssociationConnector Association="TurboAzModel.FK_Car_Status" ManuallyRouted="false" />
+        <AssociationConnector Association="TurboAzModel.FK_SelledCar_Car_Year" ManuallyRouted="false" />
+        <AssociationConnector Association="TurboAzModel.FK_SelledCar_EnginerPower" ManuallyRouted="false" />
+        <AssociationConnector Association="TurboAzModel.FK_SelledCar_Fuel" ManuallyRouted="false" />
+        <AssociationConnector Association="TurboAzModel.FK_Model_Marka" ManuallyRouted="false" />
+        <AssociationConnector Association="TurboAzModel.FK_SelledCar_Model" ManuallyRouted="false" />
+        <AssociationConnector Association="TurboAzModel.FK_SelledCar_Status" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

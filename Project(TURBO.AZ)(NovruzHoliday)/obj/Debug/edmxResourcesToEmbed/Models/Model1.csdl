@@ -1,0 +1,298 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="TurboAzModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="AdminPanel">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="AdminName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Password" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Car">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ModelID" Type="Int32" />
+    <Property Name="YearID" Type="Int32" />
+    <Property Name="EPowID" Type="Int32" />
+    <Property Name="FuelID" Type="Int32" />
+    <Property Name="StatusID" Type="Int32" />
+    <NavigationProperty Name="Car_Year" Relationship="Self.FK_Car_Car_Year" FromRole="Car" ToRole="Car_Year" />
+    <NavigationProperty Name="EnginerPower" Relationship="Self.FK_Car_EnginerPower" FromRole="Car" ToRole="EnginerPower" />
+    <NavigationProperty Name="Fuel" Relationship="Self.FK_Car_Fuel" FromRole="Car" ToRole="Fuel" />
+    <NavigationProperty Name="Model" Relationship="Self.FK_Car_Model" FromRole="Car" ToRole="Model" />
+    <NavigationProperty Name="Status" Relationship="Self.FK_Car_Status" FromRole="Car" ToRole="Status" />
+  </EntityType>
+  <EntityType Name="Car_Year">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Year" Type="Int32" />
+    <NavigationProperty Name="Cars" Relationship="Self.FK_Car_Car_Year" FromRole="Car_Year" ToRole="Car" />
+    <NavigationProperty Name="SelledCars" Relationship="Self.FK_SelledCar_Car_Year" FromRole="Car_Year" ToRole="SelledCar" />
+  </EntityType>
+  <EntityType Name="EnginerPower">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="EPowName" Type="Int32" />
+    <NavigationProperty Name="Cars" Relationship="Self.FK_Car_EnginerPower" FromRole="EnginerPower" ToRole="Car" />
+    <NavigationProperty Name="SelledCars" Relationship="Self.FK_SelledCar_EnginerPower" FromRole="EnginerPower" ToRole="SelledCar" />
+  </EntityType>
+  <EntityType Name="Fuel">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="FuelName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Cars" Relationship="Self.FK_Car_Fuel" FromRole="Fuel" ToRole="Car" />
+    <NavigationProperty Name="SelledCars" Relationship="Self.FK_SelledCar_Fuel" FromRole="Fuel" ToRole="SelledCar" />
+  </EntityType>
+  <EntityType Name="Marka">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="MarkaName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Models" Relationship="Self.FK_Model_Marka" FromRole="Marka" ToRole="Model" />
+  </EntityType>
+  <EntityType Name="Model">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ModelName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="MarkaID" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Cars" Relationship="Self.FK_Car_Model" FromRole="Model" ToRole="Car" />
+    <NavigationProperty Name="Marka" Relationship="Self.FK_Model_Marka" FromRole="Model" ToRole="Marka" />
+    <NavigationProperty Name="SelledCars" Relationship="Self.FK_SelledCar_Model" FromRole="Model" ToRole="SelledCar" />
+  </EntityType>
+  <EntityType Name="SelledCar">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ModelIDs" Type="Int32" />
+    <Property Name="YearIDs" Type="Int32" />
+    <Property Name="EpowIDs" Type="Int32" />
+    <Property Name="FuelIDs" Type="Int32" />
+    <Property Name="StatusIDs" Type="Int32" />
+    <Property Name="By" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Car_Year" Relationship="Self.FK_SelledCar_Car_Year" FromRole="SelledCar" ToRole="Car_Year" />
+    <NavigationProperty Name="EnginerPower" Relationship="Self.FK_SelledCar_EnginerPower" FromRole="SelledCar" ToRole="EnginerPower" />
+    <NavigationProperty Name="Fuel" Relationship="Self.FK_SelledCar_Fuel" FromRole="SelledCar" ToRole="Fuel" />
+    <NavigationProperty Name="Model" Relationship="Self.FK_SelledCar_Model" FromRole="SelledCar" ToRole="Model" />
+    <NavigationProperty Name="Status" Relationship="Self.FK_SelledCar_Status" FromRole="SelledCar" ToRole="Status" />
+  </EntityType>
+  <EntityType Name="Status">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="StatusName" Type="Boolean" />
+    <NavigationProperty Name="Cars" Relationship="Self.FK_Car_Status" FromRole="Status" ToRole="Car" />
+    <NavigationProperty Name="SelledCars" Relationship="Self.FK_SelledCar_Status" FromRole="Status" ToRole="SelledCar" />
+  </EntityType>
+  <EntityType Name="UserPanel">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="FirstName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="LastName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="E_mail" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Password" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="ForgetingPassword" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <Association Name="FK_Car_Car_Year">
+    <End Role="Car_Year" Type="Self.Car_Year" Multiplicity="0..1" />
+    <End Role="Car" Type="Self.Car" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Car_Year">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Car">
+        <PropertyRef Name="YearID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Car_EnginerPower">
+    <End Role="EnginerPower" Type="Self.EnginerPower" Multiplicity="0..1" />
+    <End Role="Car" Type="Self.Car" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="EnginerPower">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Car">
+        <PropertyRef Name="EPowID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Car_Fuel">
+    <End Role="Fuel" Type="Self.Fuel" Multiplicity="0..1" />
+    <End Role="Car" Type="Self.Car" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Fuel">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Car">
+        <PropertyRef Name="FuelID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Car_Model">
+    <End Role="Model" Type="Self.Model" Multiplicity="0..1" />
+    <End Role="Car" Type="Self.Car" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Model">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Car">
+        <PropertyRef Name="ModelID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Car_Status">
+    <End Role="Status" Type="Self.Status" Multiplicity="0..1" />
+    <End Role="Car" Type="Self.Car" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Status">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Car">
+        <PropertyRef Name="StatusID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_SelledCar_Car_Year">
+    <End Role="Car_Year" Type="Self.Car_Year" Multiplicity="0..1" />
+    <End Role="SelledCar" Type="Self.SelledCar" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Car_Year">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="SelledCar">
+        <PropertyRef Name="YearIDs" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_SelledCar_EnginerPower">
+    <End Role="EnginerPower" Type="Self.EnginerPower" Multiplicity="0..1" />
+    <End Role="SelledCar" Type="Self.SelledCar" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="EnginerPower">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="SelledCar">
+        <PropertyRef Name="EpowIDs" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_SelledCar_Fuel">
+    <End Role="Fuel" Type="Self.Fuel" Multiplicity="0..1" />
+    <End Role="SelledCar" Type="Self.SelledCar" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Fuel">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="SelledCar">
+        <PropertyRef Name="FuelIDs" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Model_Marka">
+    <End Role="Marka" Type="Self.Marka" Multiplicity="1" />
+    <End Role="Model" Type="Self.Model" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Marka">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Model">
+        <PropertyRef Name="MarkaID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_SelledCar_Model">
+    <End Role="Model" Type="Self.Model" Multiplicity="0..1" />
+    <End Role="SelledCar" Type="Self.SelledCar" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Model">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="SelledCar">
+        <PropertyRef Name="ModelIDs" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_SelledCar_Status">
+    <End Role="Status" Type="Self.Status" Multiplicity="0..1" />
+    <End Role="SelledCar" Type="Self.SelledCar" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Status">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="SelledCar">
+        <PropertyRef Name="StatusIDs" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="TurboAzEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="AdminPanels" EntityType="Self.AdminPanel" />
+    <EntitySet Name="Cars" EntityType="Self.Car" />
+    <EntitySet Name="Car_Year" EntityType="Self.Car_Year" />
+    <EntitySet Name="EnginerPowers" EntityType="Self.EnginerPower" />
+    <EntitySet Name="Fuels" EntityType="Self.Fuel" />
+    <EntitySet Name="Markas" EntityType="Self.Marka" />
+    <EntitySet Name="Models" EntityType="Self.Model" />
+    <EntitySet Name="SelledCars" EntityType="Self.SelledCar" />
+    <EntitySet Name="Status" EntityType="Self.Status" />
+    <EntitySet Name="UserPanels" EntityType="Self.UserPanel" />
+    <AssociationSet Name="FK_Car_Car_Year" Association="Self.FK_Car_Car_Year">
+      <End Role="Car_Year" EntitySet="Car_Year" />
+      <End Role="Car" EntitySet="Cars" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Car_EnginerPower" Association="Self.FK_Car_EnginerPower">
+      <End Role="EnginerPower" EntitySet="EnginerPowers" />
+      <End Role="Car" EntitySet="Cars" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Car_Fuel" Association="Self.FK_Car_Fuel">
+      <End Role="Fuel" EntitySet="Fuels" />
+      <End Role="Car" EntitySet="Cars" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Car_Model" Association="Self.FK_Car_Model">
+      <End Role="Model" EntitySet="Models" />
+      <End Role="Car" EntitySet="Cars" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Car_Status" Association="Self.FK_Car_Status">
+      <End Role="Status" EntitySet="Status" />
+      <End Role="Car" EntitySet="Cars" />
+    </AssociationSet>
+    <AssociationSet Name="FK_SelledCar_Car_Year" Association="Self.FK_SelledCar_Car_Year">
+      <End Role="Car_Year" EntitySet="Car_Year" />
+      <End Role="SelledCar" EntitySet="SelledCars" />
+    </AssociationSet>
+    <AssociationSet Name="FK_SelledCar_EnginerPower" Association="Self.FK_SelledCar_EnginerPower">
+      <End Role="EnginerPower" EntitySet="EnginerPowers" />
+      <End Role="SelledCar" EntitySet="SelledCars" />
+    </AssociationSet>
+    <AssociationSet Name="FK_SelledCar_Fuel" Association="Self.FK_SelledCar_Fuel">
+      <End Role="Fuel" EntitySet="Fuels" />
+      <End Role="SelledCar" EntitySet="SelledCars" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Model_Marka" Association="Self.FK_Model_Marka">
+      <End Role="Marka" EntitySet="Markas" />
+      <End Role="Model" EntitySet="Models" />
+    </AssociationSet>
+    <AssociationSet Name="FK_SelledCar_Model" Association="Self.FK_SelledCar_Model">
+      <End Role="Model" EntitySet="Models" />
+      <End Role="SelledCar" EntitySet="SelledCars" />
+    </AssociationSet>
+    <AssociationSet Name="FK_SelledCar_Status" Association="Self.FK_SelledCar_Status">
+      <End Role="Status" EntitySet="Status" />
+      <End Role="SelledCar" EntitySet="SelledCars" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>
